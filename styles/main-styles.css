@@ -164,4 +164,72 @@ footer p {
 #currentyear {
     font-weight: bold; /* Highlight the year */
 }
+/* Estilo general para el formulario */
+#contact {
+    text-align: center;  /* Centra el contenido de la sección */
+    padding: 20px;
+    background-color: #f4f4f4;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo para los encabezados */
+#contact h2 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Estilo para las etiquetas del formulario */
+#contact label {
+    font-size: 16px;
+    color: #555;
+    display: block;  /* Las etiquetas ocupan toda la línea */
+    margin-bottom: 8px;
+    text-align: left;  /* Alineación a la izquierda */
+    margin-left: 10px;  /* Margen a la izquierda para separar las etiquetas de los inputs */
+}
+
+/* Estilo para los campos de entrada */
+#contact input {
+    width: 100%;  /* Los campos de entrada ocupan todo el ancho disponible */
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;  /* Asegura que el padding no afecte el ancho del input */
+}
+
+/* Estilo para el botón de envío */
+#contact button {
+    padding: 12px 20px;
+    font-size: 16px;
+    background-color: #005b96; /* Azul de fondo */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#contact button:hover {
+    background-color: #456fa0; /* Cambia el color al pasar el mouse */
+}
+
+/* Estilo para los campos requeridos */
+.required {
+    color: red;
+}
+
+/* Estilo responsivo para pantallas pequeñas */
+@media (max-width: 768px) {
+    #contact input {
+        width: 90%;  /* En pantallas pequeñas, los inputs ocupan el 90% del ancho */
+        margin: 10px auto;
+    }
+    #contact button {
+        width: 90%;  /* Botón más grande en pantallas pequeñas */
+        margin: 10px auto;
+    }
+}
 
