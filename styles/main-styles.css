@@ -1,0 +1,167 @@
+/* siteplan.css */
+
+/* Define variables in :root */
+:root {
+    --primary-color: #005B96;
+    --secondary-color: #809ad8;
+    --highlight-color: #456fa0;
+    --background-color: #e4f3ff;
+    --white-color: #ffffff;
+    --font-family: 'Georgia', serif;
+    --font-size-large: 24px;
+    --font-size-medium: 18px;
+    --font-size-small: 16px;
+}
+
+/* General styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+    color: #333;
+}
+
+/* Header */
+header {
+    background-color: var(--white-color);
+    display: flex; /* Using flexbox to align elements */
+    justify-content: space-between; /* Align the logo and menu */
+    align-items: center; /* Align vertically */
+    padding: 20px;
+    width: 100%;
+}
+
+header img {
+    width: 100px;
+    height: auto;
+}
+
+/* Navigation Menu */
+nav {
+    background-color: var(--primary-color);
+    padding: 10px 10px;
+    color: var(--white-color);
+    display: flex;
+    align-items: center;
+    width: auto;
+    margin-right: 50px;
+}
+
+nav ul {
+    list-style-type: none;
+    text-align: left;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li {
+    display: inline;
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: var(--white-color);
+    text-decoration: none;
+    font-size: var(--font-size-small);
+}
+
+nav ul li a:hover {
+    color: #000000;
+}
+
+nav ul li a:focus,
+nav ul li a:active {
+    background-color: #ffffff;
+    outline: none;
+}
+
+
+/* For large screens (greater than 768px) */
+@media (min-width: 768px) {
+    /* Display the navigation menu */
+    nav ul {
+        display: flex; /* Display links in a horizontal line */
+        justify-content: center; /* Center the links */
+        padding: 0;
+        margin: 0;
+        list-style: none;
+    }
+
+    nav ul li {
+        margin: 0 20px; /* Space between menu items */
+    }
+
+    nav ul li a {
+        text-decoration: none;
+        color: var(--white-color);
+        font-size: var(--font-size-small);
+    }
+
+    /* Hide the ☰ button on large screens */
+    button#menu {
+        display: none; /* Button is hidden on large screens */
+    }
+}
+
+#home {
+    display: flex; /* Using Flexbox to center */
+    flex-direction: column; /* Align elements in a column */
+    justify-content: center; /* Vertically center content */
+    align-items: center; /* Horizontally center content */
+    height: auto; /* Ensure content takes up the full window height */
+    text-align: center; /* Center text within elements */
+    padding: 20px; /* Add some space around content */
+}
+
+#home h2, #home p {
+    margin: 10px 0; /* Space between elements */
+}
+
+/* General styles for images */
+main {
+    text-align: center;
+    padding: 20px;
+}
+
+/* Center images on large screens */
+main img {
+    width: 400px; /* Fixed size for all images */
+    height: 200px; /* Keep fixed height */
+    object-fit: cover; /* Ensures images are cropped and maintain proportions */
+    margin: 0 15px; /* Space between images */
+    display: inline-block; /* Ensures images align in a line */
+}
+
+/* Align images side by side on large screens */
+@media (min-width: 768px) {
+    main {
+        display: flex; /* Using Flexbox to align images */
+        flex-wrap: wrap; /* Allows images to wrap into multiple rows if needed */
+        justify-content: center; /* Center images horizontally */
+        align-items: center; /* Align images vertically */
+        gap: 20px; /* Space between images */
+    }
+}
+
+/* Footer styles */
+footer {
+    background-color: var(--primary-color); /* Blue background color */
+    color: #ffffff; /* White text color */
+    text-align: center; /* Center the text */
+    padding: 15px; /* Padding around content */
+    position: relative;
+}
+
+footer p {
+    margin: 0; /* Remove margin around paragraph */
+    font-size: 16px; /* Font size for text */
+}
+
+/* Style for dynamic year */
+#currentyear {
+    font-weight: bold; /* Highlight the year */
+}
+
