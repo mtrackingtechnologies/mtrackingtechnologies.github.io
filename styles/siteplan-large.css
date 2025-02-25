@@ -1,37 +1,54 @@
-/* siteplan-large.css */
+/* siteplan-mobile.css */
+/* Global Styles - Root Variables */
+:root {
+    --primary-color: #005B96;
+    --secondary-color: #809ad8;
+    --highlight-color: #456fa0;
+    --background-color: #e4f3ff;
+    --white-color: #ffffff;
+    --font-family: 'Georgia', serif;
+    --font-size-large: 24px;
+    --font-size-medium: 18px;
+    --font-size-small: 16px;
+}
+
+/* General Styles */
 body {
-    font-family: 'Georgia', serif;
-    background-color: #e4f3ff;
+    font-family: var(--font-family);
+    background-color: var(--background-color);
     color: #333;
     margin: 0;
     padding: 0;
 }
 
 h1, h2, h3 {
-    color: #005B96;
+    color: var(--primary-color);
 }
 
+/* Header */
 header {
-    background-color: #005B96;
+    background-color: var(--white-color);
     color: white;
     padding: 20px;
     text-align: center;
 }
-header img {
-    width: 100px;
-    margin-bottom: 20px;
-}
+
+/* Navigation */
 nav {
-    background-color: #005B96;
+    background-color: var(--primary-color);
     padding: 10px 0;
 }
 
 nav ul {
-    display: block;
+    display: none; /* Hide the navigation links by default */
     text-align: center;
     list-style: none;
     margin: 0;
     padding: 0;
+}
+
+nav ul.active {
+    display: block; /* Show the navigation links when the menu is active */
 }
 
 nav ul li {
@@ -40,45 +57,51 @@ nav ul li {
 
 nav ul li a {
     text-decoration: none;
-    color: white;
-    font-size: 16px;
+    color: var(--white-color);
+    font-size: var(--font-size-small);
 }
 
-nav ul li a:focus, nav ul li a:active {
-    background-color: #456fa0;
+nav ul li a:focus,
+nav ul li a:active {
+    background-color: var(--highlight-color);
     outline: none;
 }
 
+/* Mobile Menu Button (initially visible) */
 button#menu {
-    display: block;
-    margin: 0 auto;
-    font-size: 24px;
+    display: block; /* Show the button on small screens */
+    font-size: var(--font-size-large);
     background: none;
     border: none;
-    color: white;
+    color: var(--white-color);
+    margin: 0 auto;
+    padding: 10px;
+    cursor: pointer;
 }
 
+/* Button Link */
 .button-link {
     display: inline-block;
     padding: 10px 20px;
-    background-color: #809ad8;
-    color: white;
+    background-color: var(--secondary-color);
+    color: var(--white-color);
     text-align: center;
     border-radius: 5px;
     text-decoration: none;
+    transition: background-color 0.3s ease-in-out;
 }
 
 .button-link:hover {
-    background-color: #456fa0;
+    background-color: var(--highlight-color);
 }
 
-/* Mobile wireframe */
+/* Mobile wireframe section */
 section {
     padding: 20px;
     margin: 0 10px;
 }
 
-
+/* Form input styles */
 input:invalid {
     border-color: red;
 }
@@ -87,9 +110,10 @@ input:valid {
     border-color: green;
 }
 
+/* Footer */
 footer {
-    background-color: #005B96;
-    color: white;
+    background-color: var(--primary-color);
+    color: var(--white-color);
     padding: 15px;
     text-align: center;
 }
@@ -98,6 +122,7 @@ footer p {
     margin: 5px;
 }
 
+/* Wireframe section */
 .wireframe {
     background-color: #cce0ff;
     padding: 15px;
@@ -106,6 +131,97 @@ footer p {
 
 .wireframe h3 {
     font-size: 20px;
+}
+
+/* Mobile Specific Adjustments */
+@media (max-width: 768px) {
+    /* Make sure the text is readable and not too cramped on small screens */
+    h1, h2, h3 {
+        font-size: var(--font-size-medium);
+    }
+
+    /* Center-align the navigation links and adjust their layout */
+    nav ul li {
+        margin: 15px 0; /* Add more spacing between links */
+    }
+
+    /* Increase button size for mobile */
+    .button-link {
+        font-size: var(--font-size-medium);
+        padding: 12px 25px;
+    }
+
+    /* Adjust the header and footer padding for better alignment */
+    header, footer {
+        padding: 15px 10px;
+    }
+
+    /* Show the menu button */
+    button#menu {
+        display: block;
+        font-size: 30px;
+        padding: 10px;
+        margin: 10px auto;
+    }
+
+    /* Adjust section padding */
+    section {
+        padding: 15px 10px;
+    }
+
+    /* Wireframe styles for small screens */
+    .wireframe {
+        padding: 10px;
+        margin: 10px 0;
+    }
+
+    /* Show the navigation links when the menu button is clicked */
+    nav ul.active {
+        display: block; /* Shows the menu when active */
+    }
+
+    /* Hide the button ☰ when the menu is visible */
+    nav ul.active + button#menu {
+        display: none; /* Button ☰ hides when the menu is open */
+    }
+
+    /* Estilos generales para las imágenes en móvil */
+    main {
+        text-align: center;
+        padding: 20px;
+    }
+
+    /* Carrusel de imágenes para dispositivos móviles */
+    .carousel-container {
+        display: flex;
+        overflow: hidden; /* Oculta las imágenes fuera del área visible */
+        width: 100%;
+        position: relative;
+        margin-top: 20px; /* Espacio entre el texto y el carrusel */
+    }
+
+    .carousel-container img {
+        width: 100%; /* Las imágenes ocupan todo el ancho disponible */
+        flex-shrink: 0; /* Evita que las imágenes se reduzcan */
+    }
+
+    /* Animación para el carrusel */
+    .carousel-container {
+        animation: slide 12s infinite; /* Anima el contenedor de las imágenes */
+    }
+
+    @keyframes slide {
+        0% { transform: translateX(0); }
+        33.33% { transform: translateX(-100%); } /* Desplaza a la segunda imagen */
+        66.66% { transform: translateX(-200%); } /* Desplaza a la tercera imagen */
+        100% { transform: translateX(0); } /* Regresa al inicio */
+    }
+
+    /* El texto estará encima del carrusel en dispositivos móviles */
+    #menu-integrations, p {
+        margin: 20px auto;
+        text-align: center;
+    }
 }
 
 
