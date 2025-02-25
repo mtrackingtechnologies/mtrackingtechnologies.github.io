@@ -1,24 +1,24 @@
-//whatsapp
-// Esperar a que el documento esté completamente cargado
+// WhatsApp
+// Wait for the document to be fully loaded
 document.addEventListener('DOMContentLoaded', function() {
-    // Seleccionar el botón de WhatsApp
+    // Select the WhatsApp button
     const whatsappButton = document.getElementById('whatsapp-button');
 
-    // Verificar si el botón existe
+    // Check if the button exists
     if (whatsappButton) {
-        // Añadir un event listener para el clic en el botón
+        // Add an event listener for the button click
         whatsappButton.addEventListener('click', function() {
-            // Empujar un evento al dataLayer
-            window.dataLayer = window.dataLayer || []; // Asegurarse de que dataLayer esté inicializado
+            // Push an event to the dataLayer
+            window.dataLayer = window.dataLayer || []; // Ensure dataLayer is initialized
             window.dataLayer.push({
-                event: 'whatsappClick',  // Nombre del evento personalizado
-                eventCategory: 'Botón WhatsApp',  // Categoría del evento
-                eventAction: 'click',  // Acción del evento
-                eventLabel: 'Botón WhatsApp clicado',  // Etiqueta o descripción
-                // Puedes agregar más propiedades si lo deseas
+                event: 'whatsappClick',  // Custom event name
+                eventCategory: 'WhatsApp Button',  // Event category
+                eventAction: 'click',  // Event action
+                eventLabel: 'WhatsApp Button clicked',  // Event label or description
+                // You can add more properties if desired
             });
 
-            console.log('Evento de clic en WhatsApp enviado al dataLayer');
+            console.log('WhatsApp click event sent to dataLayer');
         });
     }
 });
@@ -63,15 +63,19 @@ document.getElementById('contactForm').addEventListener('submit', function(e) {
     alert('Form Submitted!');
 });
 
-  // Obtener el botón de menú y el contenedor de navegación
-    const menuButton = document.getElementById('menu');
-    const nav = document.querySelector('nav');
+// Get the menu button and navigation container
+const menuButton = document.getElementById('menu');
+const nav = document.querySelector('nav');
 
-    // Agregar el evento de clic al botón de menú
-    menuButton.addEventListener('click', () => {
-        // Alternar la clase "active" en el contenedor de navegación
-        nav.querySelector('ul').classList.toggle('active');
-    });
+// Add click event to the menu button
+menuButton.addEventListener('click', () => {
+    // Toggle the "active" class on the navigation container
+    nav.querySelector('ul').classList.toggle('active');
+});
+
+
+
+
 
 
 
