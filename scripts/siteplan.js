@@ -1,6 +1,6 @@
 // Year and Last Modified
 document.getElementById('currentyear').textContent = new Date().getFullYear();
-document.getElementById('lastModified').textContent = 'Last Modified: ' + document.lastModified;
+//document.getElementById('lastModified').textContent = 'Last Modified: ' + document.lastModified;
 
 // Mobile Menu Toggle (Accessibility)
 document.getElementById("menu").addEventListener("click", function() {
