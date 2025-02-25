@@ -63,4 +63,16 @@ document.getElementById('contactForm').addEventListener('submit', function(e) {
     alert('Form Submitted!');
 });
 
+  // Obtener el botón de menú y el contenedor de navegación
+    const menuButton = document.getElementById('menu');
+    const nav = document.querySelector('nav');
+
+    // Agregar el evento de clic al botón de menú
+    menuButton.addEventListener('click', () => {
+        // Alternar la clase "active" en el contenedor de navegación
+        nav.querySelector('ul').classList.toggle('active');
+    });
+
+
+
 
