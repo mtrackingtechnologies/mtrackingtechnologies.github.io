@@ -1,0 +1,108 @@
+/* siteplan-large.css */
+body {
+    font-family: 'Georgia', serif;
+    background-color: #e4f3ff;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, h3 {
+    color: #005B96;
+}
+
+header {
+    background-color: #005B96;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+nav {
+    background-color: #005B96;
+    padding: 10px 0;
+}
+
+nav ul {
+    display: block;
+    text-align: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 10px 0;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+}
+
+nav ul li a:focus, nav ul li a:active {
+    background-color: #456fa0;
+    outline: none;
+}
+
+button#menu {
+    display: block;
+    margin: 0 auto;
+    font-size: 24px;
+    background: none;
+    border: none;
+    color: white;
+}
+
+.button-link {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #809ad8;
+    color: white;
+    text-align: center;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.button-link:hover {
+    background-color: #456fa0;
+}
+
+/* Mobile wireframe */
+section {
+    padding: 20px;
+    margin: 0 10px;
+}
+
+
+input:invalid {
+    border-color: red;
+}
+
+input:valid {
+    border-color: green;
+}
+
+footer {
+    background-color: #005B96;
+    color: white;
+    padding: 15px;
+    text-align: center;
+}
+
+footer p {
+    margin: 5px;
+}
+
+.wireframe {
+    background-color: #cce0ff;
+    padding: 15px;
+    margin: 20px 0;
+}
+
+.wireframe h3 {
+    font-size: 20px;
+}
+
+

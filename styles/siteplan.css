@@ -1,0 +1,207 @@
+/* General styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #FFFFFF;
+    color: #333;
+}
+
+/* Header */
+header {
+    background-color: #053e67;
+    text-align: center;
+    padding: 40px 0; /* More space on top and bottom */
+    width: 100%;
+    box-sizing: border-box;
+}
+
+header h1 {
+    color: white;
+    font-size: 36px;
+    margin: 0;
+    display: inline-block;
+    text-align: center;
+}
+
+/* Navigation Menu */
+nav {
+    background-color: #ffffff;
+    padding: 10px 0;
+    color: #333;
+}
+
+nav ul {
+    list-style-type: none;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+nav ul li a:hover {
+    color: #333;
+}
+
+nav ul li a:focus, nav ul li a:active {
+    background-color: #456fa0;
+    outline: none;
+}
+
+/* Button link */
+.button-link {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #809ad8;
+    color: white;
+    text-align: center;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.button-link:hover {
+    background-color: #456fa0;
+}
+
+/* Section styles */
+section {
+    padding: 40px 20px;
+    margin: 20px 0;
+}
+
+#home, #menu-integrations {
+    background-color: #a4bbf2;
+    text-align: center;
+    border-color: #053e67;
+}
+
+h1, h2 {
+    color: #2C3E50;
+}
+
+/* Images */
+main {
+    text-align: center;
+}
+
+#ads-logo, #manager-logo, #analytics-logo {
+    width: 100%;
+    max-width: 350px;
+    height: auto;
+    object-fit: cover;
+    margin: 10px;
+    border-radius: 8px;
+}
+
+/* Form styles */
+#contacto form {
+    background-color: white;
+    border: 1px solid #BDC3C7;
+    padding: 20px;
+    border-radius: 8px;
+    width: 80%;
+    max-width: 500px;
+    margin: 20px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+input:invalid {
+    border-color: red;
+}
+
+input:valid {
+    border-color: green;
+}
+
+form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #BDC3C7;
+    border-radius: 5px;
+}
+
+form button {
+    padding: 10px 15px;
+    background-color: #053e67;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #0d8fec;
+}
+
+/* Footer */
+footer {
+    background-color: #053e67;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+footer p {
+    margin: 0;
+    font-size: 14px;
+}
+
+/* Mobile Menu Styles */
+
+/* Hide the menu button by default (on desktop and larger screens) */
+#menu {
+    display: none; /* Hides the button */
+}
+
+/* Show the menu button on mobile screens (max-width: 768px) */
+@media (max-width: 768px) {
+    #menu {
+        display: block; /* Shows the button on small screens */
+        font-size: 24px; /* Adjust the button size */
+        background: none;
+        border: none;
+        color: white;
+    }
+
+    /* Adjust the navigation list for mobile */
+    nav ul {
+        display: none; /* Hides the navigation links by default */
+        flex-direction: column;
+        padding: 0;
+    }
+
+    nav ul.active {
+        display: block; /* Shows the navigation links when the menu is active */
+    }
+
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    nav ul li a {
+        font-size: 18px; /* Adjust font size on mobile */
+        text-align: center; /* Center align menu items */
+    }
+}
