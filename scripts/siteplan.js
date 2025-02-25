@@ -1,3 +1,28 @@
+//whatsapp
+// Esperar a que el documento esté completamente cargado
+document.addEventListener('DOMContentLoaded', function() {
+    // Seleccionar el botón de WhatsApp
+    const whatsappButton = document.getElementById('whatsapp-button');
+
+    // Verificar si el botón existe
+    if (whatsappButton) {
+        // Añadir un event listener para el clic en el botón
+        whatsappButton.addEventListener('click', function() {
+            // Empujar un evento al dataLayer
+            window.dataLayer = window.dataLayer || []; // Asegurarse de que dataLayer esté inicializado
+            window.dataLayer.push({
+                event: 'whatsappClick',  // Nombre del evento personalizado
+                eventCategory: 'Botón WhatsApp',  // Categoría del evento
+                eventAction: 'click',  // Acción del evento
+                eventLabel: 'Botón WhatsApp clicado',  // Etiqueta o descripción
+                // Puedes agregar más propiedades si lo deseas
+            });
+
+            console.log('Evento de clic en WhatsApp enviado al dataLayer');
+        });
+    }
+});
+
 // Year and Last Modified
 document.getElementById('currentyear').textContent = new Date().getFullYear();
 //document.getElementById('lastModified').textContent = 'Last Modified: ' + document.lastModified;
@@ -38,27 +63,4 @@ document.getElementById('contactForm').addEventListener('submit', function(e) {
     alert('Form Submitted!');
 });
 
-//whatsapp
-// Esperar a que el documento esté completamente cargado
-document.addEventListener('DOMContentLoaded', function() {
-    // Seleccionar el botón de WhatsApp
-    const whatsappButton = document.getElementById('whatsapp-button');
 
-    // Verificar si el botón existe
-    if (whatsappButton) {
-        // Añadir un event listener para el clic en el botón
-        whatsappButton.addEventListener('click', function() {
-            // Empujar un evento al dataLayer
-            window.dataLayer = window.dataLayer || []; // Asegurarse de que dataLayer esté inicializado
-            window.dataLayer.push({
-                event: 'whatsappClick',  // Nombre del evento personalizado
-                eventCategory: 'Botón WhatsApp',  // Categoría del evento
-                eventAction: 'click',  // Acción del evento
-                eventLabel: 'Botón WhatsApp clicado',  // Etiqueta o descripción
-                // Puedes agregar más propiedades si lo deseas
-            });
-
-            console.log('Evento de clic en WhatsApp enviado al dataLayer');
-        });
-    }
-});
