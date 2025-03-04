@@ -1,5 +1,4 @@
 /* siteplan.css */
-
 /* Define variables in :root */
 :root {
     --primary-color: #005B96;
@@ -25,9 +24,9 @@ body {
 /* Header */
 header {
     background-color: var(--white-color);
-    display: flex; /* Using flexbox to align elements */
-    justify-content: space-between; /* Align the logo and menu */
-    align-items: center; /* Align vertically */
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
     padding: 20px;
     width: 100%;
 }
@@ -81,17 +80,17 @@ nav ul li a:active {
 
 /* For large screens (greater than 768px) */
 @media (min-width: 768px) {
-    /* Display the navigation menu */
+    /* Show the navigation menu */
     nav ul {
-        display: flex; /* Display links in a horizontal line */
-        justify-content: center; /* Center the links */
+        display: flex; 
+        justify-content: center; 
         padding: 0;
         margin: 0;
         list-style: none;
     }
 
     nav ul li {
-        margin: 0 20px; /* Space between menu items */
+        margin: 0 20px; 
     }
 
     nav ul li a {
@@ -102,22 +101,22 @@ nav ul li a:active {
 
     /* Hide the ☰ button on large screens */
     button#menu {
-        display: none; /* Button is hidden on large screens */
+        display: none; 
     }
 }
 
 #home {
-    display: flex; /* Using Flexbox to center */
-    flex-direction: column; /* Align elements in a column */
-    justify-content: center; /* Vertically center content */
-    align-items: center; /* Horizontally center content */
-    height: auto; /* Ensure content takes up the full window height */
-    text-align: center; /* Center text within elements */
-    padding: 20px; /* Add some space around content */
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center; 
+    height: auto;
+    text-align: center;
+    padding: 20px; 
 }
 
 #home h2, #home p {
-    margin: 10px 0; /* Space between elements */
+    margin: 10px 0; 
 }
 
 /* General styles for images */
@@ -128,83 +127,87 @@ main {
 
 /* Center images on large screens */
 main img {
-    width: 400px; /* Fixed size for all images */
-    height: 200px; /* Keep fixed height */
-    object-fit: cover; /* Ensures images are cropped and maintain proportions */
-    margin: 0 15px; /* Space between images */
-    display: inline-block; /* Ensures images align in a line */
+    width: 400px; 
+    height: 200px; 
+    object-fit: cover; 
+    margin: 0 15px; 
+    display: inline-block; 
 }
 
 /* Align images side by side on large screens */
 @media (min-width: 768px) {
     main {
-        display: flex; /* Using Flexbox to align images */
-        flex-wrap: wrap; /* Allows images to wrap into multiple rows if needed */
-        justify-content: center; /* Center images horizontally */
-        align-items: center; /* Align images vertically */
-        gap: 20px; /* Space between images */
+        display: flex; 
+        flex-wrap: wrap; 
+        justify-content: center; 
+        align-items: center;
+        gap: 20px; 
     }
 }
 
 /* Footer styles */
 footer {
-    background-color: var(--primary-color); /* Blue background color */
-    color: #ffffff; /* White text color */
-    text-align: center; /* Center the text */
-    padding: 15px; /* Padding around content */
+    background-color: var(--primary-color); 
+    color: #ffffff; 
+    text-align: center; 
+    padding: 15px; 
     position: relative;
 }
 
 footer p {
-    margin: 0; /* Remove margin around paragraph */
-    font-size: 16px; /* Font size for text */
+    margin: 0; 
+    font-size: 16px; 
 }
 
-/* Style for dynamic year */
+/* Style for the dynamic year */
 #currentyear {
-    font-weight: bold; /* Highlight the year */
+    font-weight: bold; 
 }
-/* Estilo general para el formulario */
+
+/* General style for the form */
 #contact {
-    text-align: center;  /* Centra el contenido de la sección */
+    text-align: center;  
     padding: 20px;
     background-color: #f4f4f4;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 600px;  
+    margin: 0 auto; 
 }
 
-/* Estilo para los encabezados */
+/* Style for the headers */
 #contact h2 {
     font-size: 24px;
     color: #333;
     margin-bottom: 20px;
 }
 
-/* Estilo para las etiquetas del formulario */
+/* Style for form labels */
 #contact label {
     font-size: 16px;
     color: #555;
-    display: block;  /* Las etiquetas ocupan toda la línea */
+    display: block;  
     margin-bottom: 8px;
-    text-align: left;  /* Alineación a la izquierda */
-    margin-left: 10px;  /* Margen a la izquierda para separar las etiquetas de los inputs */
+    text-align: left;  
+    margin-left: 10px; 
 }
 
-/* Estilo para los campos de entrada */
+/* Style for input fields */
 #contact input {
-    width: 100%;  /* Los campos de entrada ocupan todo el ancho disponible */
+    width: 50%;  
     padding: 10px;
     margin-bottom: 15px;
     border: 1px solid #ccc;
     border-radius: 4px;
-    box-sizing: border-box;  /* Asegura que el padding no afecte el ancho del input */
+    box-sizing: border-box; 
+    align-items: center;
 }
 
-/* Estilo para el botón de envío */
+/* Style for the submit button */
 #contact button {
     padding: 12px 20px;
     font-size: 16px;
-    background-color: #005b96; /* Azul de fondo */
+    background-color: #005b96; 
     color: white;
     border: none;
     border-radius: 4px;
@@ -213,23 +216,28 @@ footer p {
 }
 
 #contact button:hover {
-    background-color: #456fa0; /* Cambia el color al pasar el mouse */
+    background-color: #456fa0; 
 }
 
-/* Estilo para los campos requeridos */
+/* Style for required fields */
 .required {
     color: red;
 }
 
-/* Estilo responsivo para pantallas pequeñas */
+/* Responsive style for small screens */
 @media (max-width: 768px) {
     #contact input {
-        width: 90%;  /* En pantallas pequeñas, los inputs ocupan el 90% del ancho */
+        width: 90%;  /
         margin: 10px auto;
     }
     #contact button {
-        width: 90%;  /* Botón más grande en pantallas pequeñas */
+        width: 90%; 
         margin: 10px auto;
     }
+}
+/* Button Whatsapp */
+.whatsapp-button {
+    width: 50px; /* Adjust the size as needed */
+    height: auto;
 }
 
