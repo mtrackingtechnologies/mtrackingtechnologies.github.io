@@ -41,7 +41,7 @@ nav {
 }
 
 nav ul {
-    display: none; /* Hide the navigation links by default */
+    display: none;
     text-align: center;
     list-style: none;
     margin: 0;
@@ -49,7 +49,7 @@ nav ul {
 }
 
 nav ul.active {
-    display: block; /* Show the navigation links when the menu is active */
+    display: block; 
 }
 
 nav ul li {
@@ -70,26 +70,26 @@ nav ul li a:active {
 
 /* Mobile Menu Button (initially visible only on mobile) */
 button#menu {
-    display: block; /* Show the button only in mobile view */
+    display: block; 
     font-size: var(--font-size-large);
     background: none;
     border: none;
     color: var(--white-color);
-    margin: 0 auto; /* Center the button horizontally */
+    margin: 0 auto;
     padding: 10px;
     cursor: pointer;
-    text-align: center; /* Ensure the text is centered within the button */
+    text-align: center; 
 }
 
 /* Hide the menu button in larger screens */
 @media (min-width: 768px) {
     button#menu {
-        display: none; /* Hide the menu button on larger screens */
+        display: none; 
     }
 
-    /* Show the navigation menu in larger screens */
+    /* Show the navigation menu on larger screens */
     nav ul {
-        display: flex; /* Display navigation items horizontally */
+        display: flex; 
         justify-content: center;
         padding: 0;
         margin: 0;
@@ -97,7 +97,7 @@ button#menu {
     }
 
     nav ul li {
-        margin: 0 20px; /* Spacing between menu items */
+        margin: 0 20px;
     }
 
     nav ul li a {
@@ -109,14 +109,11 @@ button#menu {
 
 /* Mobile Specific Adjustments */
 @media (max-width: 768px) {
-    /* Make sure the text is readable and not too cramped on small screens */
     h1, h2, h3 {
         font-size: var(--font-size-medium);
     }
-
-    /* Center-align the navigation links and adjust their layout */
     nav ul li {
-        margin: 15px 0; /* Add more spacing between links */
+        margin: 15px 0; 
     }
 
     /* Increase button size for mobile */
@@ -151,12 +148,12 @@ button#menu {
 
     /* Show the navigation links when the menu button is clicked */
     nav ul.active {
-        display: block; /* Shows the menu when active */
+        display: block; 
     }
 
-    /* Hide the button ☰ when the menu is visible */
+    /* Hide the ☰ button when the menu is visible */
     nav ul.active + button#menu {
-        display: none; /* Button ☰ hides when the menu is open */
+        display: none; 
     }
 
     /* General styles for images on mobile */
@@ -167,50 +164,50 @@ button#menu {
 
     /* Image carousel for mobile devices */
     .carousel-container {
-        position: relative; /* Needed to overlay images */
-        width: 100%; /* The container width is 100% */
-        height: 300px; /* Fixed height for the carousel */
-        overflow: hidden; /* Hides images outside the visible area */
+        position: relative;
+        width: 100%; 
+        height: 300px; 
+        overflow: hidden; 
     }
 
     .carousel-container img {
-        position: absolute; /* Place images on top of each other */
+        position: absolute; 
         top: 0;
         left: 0;
-        width: 80px; /* Images occupy the full width of the container */
-        height: auto; /* Adjust the height automatically to maintain proportion */
-        opacity: 0; /* Initially images are invisible */
-        transition: opacity 1s ease-in-out; /* Smooth transition for fading */
+        width: 80px; 
+        height: auto; 
+        opacity: 0; 
+        transition: opacity 1s ease-in-out;
     }
 
     /* Animation for the carousel */
     .carousel-container img:nth-child(1) {
-        animation: fade 12s infinite 0s; /* First image appears initially */
+        animation: fade 12s infinite 0s; 
     }
 
     .carousel-container img:nth-child(2) {
-        animation: fade 12s infinite 4s; /* Second image appears after 4 seconds */
+        animation: fade 12s infinite 4s; 
     }
 
     .carousel-container img:nth-child(3) {
-        animation: fade 12s infinite 8s; /* Third image appears after 8 seconds */
+        animation: fade 12s infinite 8s;
     }
 
     @keyframes fade {
-        0% { opacity: 0; } /* At the start, the image is invisible */
-        10% { opacity: 1; } /* Image gradually becomes visible */
-        30% { opacity: 1; } /* Image remains visible */
-        40% { opacity: 0; } /* Image fades out */
-        100% { opacity: 0; } /* Image stays invisible at the end */
+        0% { opacity: 0; } 
+        10% { opacity: 1; } 
+        30% { opacity: 1; } 
+        40% { opacity: 0; } 
+        100% { opacity: 0; } 
     }
 
-    /* Ensure carousel images align correctly */
+    /* Ensure images in the carousel align properly */
     .carousel-container img {
-        object-fit: cover; /* Ensures images fit correctly within the container */
-        width: 100%; /* Makes all images fit 100% of their container */
+        object-fit: cover; 
+        width: 100%; 
     }
 
-    /* Text will be on top of the carousel on mobile devices */
+    /* The text will be on top of the carousel on mobile devices */
     #menu-integrations, p {
         margin: 20px auto;
         text-align: center;
@@ -219,22 +216,26 @@ button#menu {
 
 /* Footer Styles */
 footer {
-    background-color: var(--primary-color); /* Blue background color */
-    color: #ffffff; /* White text color */
-    text-align: center; /* Center the text */
-    padding: 15px; /* Padding around content */
+    background-color: var(--primary-color);
+    color: #ffffff; 
+    text-align: center; 
+    padding: 15px; 
     position: relative;
 }
 
 footer p {
-    margin: 0; /* Remove margin around the paragraph */
-    font-size: 16px; /* Font size for text */
+    margin: 0;
+    font-size: 16px; 
 }
 
-/* Style for dynamic year */
+/* Style for the dynamic year */
 #currentyear {
-    font-weight: bold; /* Highlight the year */
+    font-weight: bold; 
 }
 
+.whatsapp-button {
+    width: 50px; 
+    height: auto;
+}
 
 
