@@ -73,6 +73,44 @@ menuButton.addEventListener('click', () => {
     nav.querySelector('ul').classList.toggle('active');
 });
 
+//button translate
+//
+const translateButton = document.getElementById('translateButton');
+
+const languages = ['en', 'es', 'pt'];
+let currentLangIndex = 0; 
+
+// Función para traducir
+const translatePage = async (language) => {
+    try {
+        // Call from API Google Translate (reemplazar 'YOUR_API_KEY' por tu propia clave)
+        const response = await fetch(`https://translation.googleapis.com/language/translate/v2?key=YOUR_API_KEY`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+                q: document.body.innerText,
+                target: language,
+            }),
+        });
+
+        const data = await response.json();
+
+        // Update
+        document.body.innerText = data.data.translations[0].translatedText;
+    } catch (error) {
+        console.error('Error al traducir:', error);
+    }
+};
+
+// Change
+translateButton.addEventListener('click', () => {
+    const newLang = languages[currentLangIndex];
+    translatePage(newLang);
+    // Next
+    currentLangIndex = (currentLangIndex + 1) % languages.length;
+});
 
 
 
