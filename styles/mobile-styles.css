@@ -233,9 +233,17 @@ footer p {
     font-weight: bold; 
 }
 
+/* Button Whatsapp */
 .whatsapp-button {
-    width: 50px; 
-    height: auto;
+    width: 50px;
+    height: 50px;
 }
+
+/*email button */
+.email-button{
+    width: 50px;
+    height: 50px;
+}
+
 
 
