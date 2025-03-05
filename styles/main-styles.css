@@ -43,7 +43,6 @@ nav {
     color: var(--white-color);
     display: flex;
     align-items: center;
-    width: auto;
     margin-right: 50px;
 }
 
@@ -76,7 +75,6 @@ nav ul li a:active {
     background-color: #ffffff;
     outline: none;
 }
-
 
 /* For large screens (greater than 768px) */
 @media (min-width: 768px) {
@@ -227,7 +225,7 @@ footer p {
 /* Responsive style for small screens */
 @media (max-width: 768px) {
     #contact input {
-        width: 90%;  /
+        width: 90%;  
         margin: 10px auto;
     }
     #contact button {
@@ -235,16 +233,19 @@ footer p {
         margin: 10px auto;
     }
 }
+
 /* Button Whatsapp */
 .whatsapp-button {
-    width: 50px; /* Adjust the size as needed */
-    height: auto;
+    width: 50px;
+    height: 50px;
 }
+
 /*email button */
 .email-button{
-    width: 50px; /* Adjust the size as needed */
-    height: auto;
+    width: 50px;
+    height: 50px;
 }
+
 /*Button Translate*/
 button {
     background-color: #4CAF50;
