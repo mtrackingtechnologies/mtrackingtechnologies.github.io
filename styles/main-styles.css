@@ -240,7 +240,11 @@ footer p {
     width: 50px; /* Adjust the size as needed */
     height: auto;
 }
-
+/*email button */
+.email-button{
+    width: 50px; /* Adjust the size as needed */
+    height: auto;
+}
 /*Button Translate*/
 button {
     background-color: #4CAF50;
