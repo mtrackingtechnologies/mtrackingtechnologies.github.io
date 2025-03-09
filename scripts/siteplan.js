@@ -123,7 +123,6 @@ translateButton.addEventListener('click', () => {
 //center button email and whatsapp
 document.addEventListener('DOMContentLoaded', function() {
     if (window.location.pathname.includes('contact')) { 
-        // Selecciona los botones de WhatsApp y correo electrónico
         const whatsappButton = document.querySelector('.whatsapp-button');
         const emailButton = document.querySelector('.email-button');
         
