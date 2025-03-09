@@ -120,6 +120,29 @@ translateButton.addEventListener('click', () => {
     currentLangIndex = (currentLangIndex + 1) % languages.length;
 });
 
+//center button email and whatsapp
+document.addEventListener('DOMContentLoaded', function() {
+    if (window.location.pathname.includes('contact')) { 
+        // Selecciona los botones de WhatsApp y correo electrónico
+        const whatsappButton = document.querySelector('.whatsapp-button');
+        const emailButton = document.querySelector('.email-button');
+        
+        if (whatsappButton && emailButton) {
+            const buttonsContainer = document.createElement('div');
+            buttonsContainer.style.display = 'flex';  
+            buttonsContainer.style.justifyContent = 'center';  
+            buttonsContainer.style.alignItems = 'center';  
+            buttonsContainer.style.gap = '10px'; 
+
+            buttonsContainer.appendChild(whatsappButton);
+            buttonsContainer.appendChild(emailButton);
+
+           
+            const contactSection = document.getElementById('contact');  /
+            contactSection.appendChild(buttonsContainer);
+        }
+    }
+});
 
 
 
