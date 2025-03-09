@@ -25,21 +25,18 @@ document.addEventListener('DOMContentLoaded', function() {
 
 // Year and Last Modified
 document.getElementById('currentyear').textContent = new Date().getFullYear();
-//document.getElementById('lastModified').textContent = 'Last Modified: ' + document.lastModified;
 
 // Mobile Menu Toggle (Accessibility)
 document.getElementById("menu").addEventListener("click", function() {
     let nav = document.querySelector("nav ul");
-    nav.classList.toggle("active");  // Toggle the 'active' class to show/hide the menu
-    // Optionally, focus the first menu item for better keyboard navigation
+    nav.classList.toggle("active");  
     if (nav.classList.contains("active")) {
         let firstMenuItem = nav.querySelector("a");
         if (firstMenuItem) {
-            firstMenuItem.focus();  // Focus on the first link in the menu for keyboard accessibility
+            firstMenuItem.focus(); 
         }
     } else {
-        // Optionally, remove focus from the menu when closed
-        document.getElementById("menu").focus();  // Return focus to the menu button for keyboard users
+        document.getElementById("menu").focus(); 
     }
 });
 
@@ -49,7 +46,7 @@ if (localStorage.getItem("reviews")) {
     reviewsCount++;
     localStorage.setItem("reviews", reviewsCount);
 } else {
-    localStorage.setItem("reviews", 1); // First review
+    localStorage.setItem("reviews", 1); 
 }
 
 // Display the review count
@@ -58,9 +55,23 @@ document.addEventListener("DOMContentLoaded", function() {
     console.log("Total Reviews: " + reviewCount);
 });
 
+//form submission and push to dataLayer
 document.getElementById('contactForm').addEventListener('submit', function(e) {
-    e.preventDefault();
-    alert('Form Submitted!');
+    e.preventDefault();  // Prevent the default form submission (optional)
+
+    // Send event to dataLayer when form is submitted
+    window.dataLayer = window.dataLayer || []; // Ensure dataLayer is initialized
+    window.dataLayer.push({
+        event: 'formSubmission',  // Custom event name
+        eventCategory: 'Contact Form',  // Event category
+        eventAction: 'submit',  // Event action
+        eventLabel: 'Contact Form Submitted',  // Event label or description
+        // Add form data or other information if needed, e.g.:
+        formName: 'Contact Form',  // Example of additional data
+    });
+
+    console.log('Form submission event sent to dataLayer');
+    alert('Form Submitted!'); 
 });
 
 // Get the menu button and navigation container
@@ -69,12 +80,10 @@ const nav = document.querySelector('nav');
 
 // Add click event to the menu button
 menuButton.addEventListener('click', () => {
-    // Toggle the "active" class on the navigation container
     nav.querySelector('ul').classList.toggle('active');
 });
 
-//button translate
-//
+// Button Translate
 const translateButton = document.getElementById('translateButton');
 
 const languages = ['en', 'es', 'pt'];
@@ -83,7 +92,7 @@ let currentLangIndex = 0;
 // Función para traducir
 const translatePage = async (language) => {
     try {
-        // Call from API Google Translate (reemplazar 'YOUR_API_KEY' por tu propia clave)
+        // Call from API Google Translate (replace 'YOUR_API_KEY' with your actual key)
         const response = await fetch(`https://translation.googleapis.com/language/translate/v2?key=YOUR_API_KEY`, {
             method: 'POST',
             headers: {
@@ -97,21 +106,19 @@ const translatePage = async (language) => {
 
         const data = await response.json();
 
-        // Update
+        // Update the content with the translated text
         document.body.innerText = data.data.translations[0].translatedText;
     } catch (error) {
-        console.error('Error al traducir:', error);
+        console.error('Error while translating:', error);
     }
 };
 
-// Change
+// Change language
 translateButton.addEventListener('click', () => {
     const newLang = languages[currentLangIndex];
     translatePage(newLang);
-    // Next
     currentLangIndex = (currentLangIndex + 1) % languages.length;
 });
-
 
 
 
