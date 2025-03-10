@@ -119,7 +119,10 @@ nav ul li a:active {
 
 /* General styles for images */
 main {
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centrar las imágenes */
+    gap: 20px; /* Espacio entre las imágenes */
     padding: 20px;
 }
 
@@ -132,14 +135,27 @@ main img {
     display: inline-block; 
 }
 
+#logo-wordpress, #logo-Wix, #prestashop {
+    width: 80%; /* Ajusta el tamaño de las imágenes */
+    max-width: 400px; /* Limita el tamaño máximo */
+    height: auto;
+}
+
+main a {
+    text-align: center;
+    display: block;
+    margin-top: 10px;
+}
+
 /* Align images side by side on large screens */
-@media (min-width: 768px) {
+@media screen and (max-width: 768px) {
     main {
-        display: flex; 
-        flex-wrap: wrap; 
-        justify-content: center; 
-        align-items: center;
-        gap: 20px; 
+        padding: 10px;
+    }
+
+    #logo-wordpress, #logo-Wix, #prestashop {
+        width: 100%; /* En pantallas pequeñas, las imágenes ocupan todo el ancho */
+        max-width: 100%; /* No exceder el ancho de la pantalla */
     }
 }
 
