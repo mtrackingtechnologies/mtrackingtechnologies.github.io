@@ -142,7 +142,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 });
-
+/*
 function mostrarSeccion() {
     // Get the selected values from both dropdowns
     const sectionToolValue = document.getElementById("section-tool").value;
@@ -157,7 +157,7 @@ function mostrarSeccion() {
         document.getElementById("sectionTool").style.display = "none";
     }
 }
-
+*/
 
 
 
