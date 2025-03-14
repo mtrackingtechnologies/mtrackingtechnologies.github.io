@@ -42,22 +42,54 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <h2>Contact us. We would be happy to assist you.</h2>
     
        <!-- modify this form HTML and place wherever you want your form -->
-<form action="https://formspree.io/f/xvgkpkyv" method="POST">
-    <fieldset>
-        <legend>Contact Information</legend>
+   <form action="https://formspree.io/f/xvgkpkyv" method="POST">
+            <fieldset>
+                <legend>Contact Information</legend>
+                
+                <label for="section-tool">Select the tool or configuration</label>
+                <select id="section-tool" name="section-tool" onchange="mostrarSeccion()">
+                    <option value="">--None--</option>
+                    <option value="section-tool-1">Google Ads</option>
+                    <option value="section-tool-2">Google Analytics 4</option>
+                    <option value="section-tool-3">Google Tag Manager</option>
+                    <option value="section-tool-4">Discrepancy between GA4 and Google Ads</option>
+                    <option value="section-tool-5">Conversion setup in Google Tag Manager</option>
+                    <option value="section-tool-6">Conversion setup with gtag.js</option>
+                    <option value="section-tool-7">Tags configuration</option>
+                </select><br>
         
-        <label for="name">Name: <span class="required">*</span></label>
-        <input type="text" id="name" name="name" required>
+                <label for="section-CMS">Select CMS</label>
+                <select id="section-CMS" name="section-CMS" onchange="mostrarSeccion()">
+                    <option value="">--None--</option>
+                    <option value="section-CMS-1">WordPress</option>
+                    <option value="section-CMS-2">Wix</option>
+                    <option value="section-CMS-3">PrestaShop</option>
+                    <option value="section-CMS-4">Shopify</option>
+                    <option value="section-CMS-5">Magento</option>
+                    <option value="section-CMS-6">TiendaNube</option>
+                    <option value="section-CMS-7">Other</option>
+                </select>
+            
+                <div id="sectionTool" class="sectionTool" style="display:none;">
+                    <label for="name">Name: <span class="required">*</span></label>
+                    <input type="text" id="name" name="name" required><br>
+        
+                    <label for="email">Email: <span class="required">*</span></label>
+                    <input type="email" id="email" name="email" required><br>
+        
+                    <label for="phone">Phone: <span class="required">*</span></label>
+                    <input type="tel" id="phone" name="phone" required><br>
     
-        <label for="email">Email: <span class="required">*</span></label>
-        <input type="email" id="email" name="email" required><br>
-
-        <label for="phone">Phone: <span class="required">*</span></label>
-        <input type="tel" id="phone" name="phone" required><br>
-
-        <button type="submit">Submit</button>
-    </fieldset>
-</form>
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message"></textarea><br>
+        
+                    <label for="Share-URL-link">Share the URL link</label>
+                    <input type="text" id="Share-URL-link" name="Share-URL-link"><br>
+                </div>
+            
+                <button type="submit">Submit</button>
+            </fieldset>
+        </form>
     </section>
 <a href="https://wa.me/+5511913522177" id="whatsapp-button" class="whatsapp-button" target="_blank">
     <img src="images/whatsapp-button.png" alt="WhatsApp" class="whatsapp-button">
