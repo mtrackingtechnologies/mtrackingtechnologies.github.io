@@ -143,6 +143,21 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 
+    function mostrarSeccion() {
+        // Get the selected values from both dropdowns
+        const sectionToolValue = document.getElementById("section-tool").value;
+        const sectionCMSValue = document.getElementById("section-CMS").value;
+        
+        // Check if both options are selected
+        if (sectionToolValue && sectionCMSValue) {
+            // Show the input fields if both dropdowns have selections
+            document.getElementById("sectionTool").style.display = "block";
+        } else {
+            // Hide the input fields if either of the dropdowns is not selected
+            document.getElementById("sectionTool").style.display = "none";
+        }
+    }
+
 
 
 
