@@ -143,7 +143,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 
-   function mostrarSeccion() {
+function mostrarSeccion() {
     // Get the selected values from both dropdowns
     const sectionToolValue = document.getElementById("section-tool").value;
     const sectionCMSValue = document.getElementById("section-CMS").value;
