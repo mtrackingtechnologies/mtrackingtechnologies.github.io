@@ -1,5 +1,4 @@
 /* siteplan-mobile.css */
-
 /* Global Styles - Root Variables */
 :root {
     --primary-color: #005B96;
@@ -16,16 +15,18 @@
 /* General Styles */
 body {
     font-family: var(--font-family);
-    background-color: var(--background-color);
+    background-color: var(--white-color);
     color: #333;
     margin: 0;
     padding: 0;
 }
 
-h1, h2, h3 {
+h2, h3 {
     color: var(--primary-color);
 }
-
+h1 {
+    color: var(--primary-color);
+}
 /* Header */
 header {
     background-color: var(--white-color);
@@ -250,5 +251,6 @@ footer p {
     width: 50px;
     height: 50px;
 }
+
 
 
