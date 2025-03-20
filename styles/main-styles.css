@@ -30,7 +30,7 @@ header {
     padding: 20px;
     width: 100%;
     border-bottom: 7px solid #005B96;
-    box-shadow: 0 4px 8px rgba(0, 123, 255, 0.3); 
+    box-shadow: 0 4px 8px rgba(0, 123, 255, 0.3);
 }
 
 header img {
@@ -126,20 +126,20 @@ nav ul li a:active {
 
 /*Home Section*/
 #home {
-    display: flex; 
+    display: flex;
     align-items: center; 
-    justify-content: flex-start;
-    gap: 30px;
-    padding: 20px;
+    justify-content: flex-start; 
+    gap: 30px; 
+    padding: 20px; 
     border: 3px solid #ccc; 
-    border-radius: 10px; 
+    border-radius: 10px;
     margin-left: 20px; 
     margin-right: 20px;
     background-color: var(--background-color);
 }
 
 .text-content {
-    max-width: 50%; /
+    max-width: 50%; 
 }
 
 #home h2 {
@@ -149,14 +149,14 @@ nav ul li a:active {
 }
 
 #home p {
-    font-size: 1rem;
+    font-size: 1rem; 
     line-height: 1.6; 
 }
 
 #home-image {
     width: 40%; 
     height: auto;
-    border-radius: 8px; 
+    border-radius: 8px;
 }
 
 
